@@ -4,7 +4,7 @@
 module.exports = function (server) {
 
     server.get('/', function (req, res) {
-        var model = { name: 'faststraw' };
+        var model = { name: 'FastStraw' };
         
         res.render('index', model);
         

@@ -5,6 +5,5 @@
 {/title}
 
 {<body}
-	<h1>Welcome to {name} :)</h1>
-	</div>
+	<div class="banner"><span>{name}</span><img src="img/straw.svg"></div>
 {/body}
