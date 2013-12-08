@@ -2,13 +2,26 @@
 <html lang="en">
 <head>
     <meta charset="utf-8" />
+    <meta name="author" content="Avi Romanoff">
+    <meta name="author" content="Plebiscites for the Wild West">
     <title>{+title /}</title>
+    <link rel="stylesheet" href="components/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="components/bootstrap/dist/css/bootstrap-theme.css" />
     <link rel="stylesheet" href="css/app.css" />
+    <link rel="stylesheet" href="css/sticky-footer.css" />
 </head>
 <body>
-<div id="wrapper">
-    {+body /}
-</div>
+<div id="wrap">
+
+	<div class="container">
+		{+body /}
+	</div>
+
+	<div id="footer">
+		<div class="container">
+			{>footer  /}
+		</div>
+	</div>
 
 </body>
 </html>

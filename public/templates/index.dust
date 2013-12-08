@@ -1,5 +1,12 @@
 {>"layouts/master" /}
 
+{<title}
+  FastStraw
+{/title}
+
 {<body}
-    <h1>{@pre type="content" key="index.greeting"/}</h1>
+	<div class="page-header">
+		<h1>Welcome to {name} :)</h1>
+	</div>
+	</div>
 {/body}
