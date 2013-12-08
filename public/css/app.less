@@ -1,30 +1,72 @@
 body {
   background: #111;
   color: white;
-  padding-top: 40px;
-  font-family: 'Englebert', sans-serif;
+  padding-top: 30px;
+  // margin-left: -50px;
 }
 
 .banner {
-  position: absolute;
-  top: 60px;
-  left: 0px;
-  -webkit-transform: rotate(-45deg);
-  -moz-transform: rotate(-45deg);
-  -ms-transform: rotate(-45deg);
-  -o-transform: rotate(-45deg);
-  transform: rotate(-45deg);
+  @media (min-width: 1000px) {
+    position: fixed;
+    top: 80px;
+    right: 0px;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+  @media (max-width: 1000px) {
+    text-align: center;
+  }
   span {
+    font-family: 'Englebert', sans-serif;
     font-size: 60px;
     color: #FFA500;
-    text-align: left;
+    text-align: right;
+    @media (max-width: 1000px) {
+      margin-right: 10px;
+    }
   }
   img {
-    position: absolute;
-    top: -100px;
-    left: 80px;
-    margin-top: 22.5px;
     height: 75px;
+    @media (min-width: 1000px) {
+      position: fixed;
+      top: -100px;
+      right: 95px;
+      margin-top: 22.5px;
+      height: 75px;
+    }
+    @media (max-width: 1000px) {
+      margin-top: -30px;
+    }
+  }
+}
+
+#main {
+  font-family: 'Signika Negative', sans-serif;
+  text-align: center;
+  font-size: 40px;
+  text-align: left;
+  padding-left: 25px;
+  .pre-q {
+    padding-right: 15px;
+    color: #428bca;
+    font-size: 75px;
+  }
+  .answer {
+    margin-top: 25px;
+  }
+  .pre-a {
+    color: #428bca; 
+    padding-right: 15px;
+    font-size: 75px;
+  }
+  a {
+    margin-right: 10px;
+    margin-top: -25px;
+    font-size: 30px;
+    border-radius: 100%;
   }
 }
 
@@ -34,10 +76,7 @@ body {
   text-align: center;
   font-family: 'Architects Daughter', cursive;
   font-size: 20px;
-  .made {
-    color: #C67509;
-  }
-  .passion {
-    color: #F12D47;
+  .avi, .made, .passion {
+    color: #FFA500;
   }
 }
