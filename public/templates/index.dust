@@ -5,8 +5,6 @@
 {/title}
 
 {<body}
-	<div class="page-header">
-		<h1>Welcome to {name} :)</h1>
-	</div>
+	<h1>Welcome to {name} :)</h1>
 	</div>
 {/body}
