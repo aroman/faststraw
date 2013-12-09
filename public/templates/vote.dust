@@ -1,0 +1,19 @@
+{>"layouts/master" /}
+
+{<title}
+  FastStraw
+{/title}
+
+{<body}
+	<div id="main">
+		<div class="question">
+			<span class="pre-q">Q:</span>
+			<span class="q">Should SA organize a ski trip this year?</span>
+		</div>
+		<div class="answer">
+			<span class="pre-a">A:</span>
+			<a href="#" class="btn btn-success">Yiz</a>
+			<a href="#" class="btn btn-danger"> No</a>
+		</div>
+	</div>
+{/body}
