@@ -5,10 +5,6 @@
 {/title}
 
 {<body}
-	<div class="banner">
-		<span>{name}</span>
-		<img src="img/straw.svg">
-	</div>
 	<a href="/create">Create a poll</a>
 	<br>
 	<a href="/derp">Something else</a>

@@ -1,0 +1,11 @@
+{>"layouts/master" /}
+
+{<title}
+  FastStraw
+{/title}
+
+{<body}
+	<div id="main">
+		<h1>CREATION MOTHAFUCKA</h1>
+	</div>
+{/body}

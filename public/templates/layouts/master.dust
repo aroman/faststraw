@@ -6,16 +6,16 @@
     <meta name="author" content="Plebiscites for the Wild West">
     <title>{+title /}</title>
     <link href='http://fonts.googleapis.com/css?family=Architects+Daughter|Englebert|Signika+Negative' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="components/bootstrap/dist/css/bootstrap.css" />
-    <link rel="stylesheet" href="components/bootstrap/dist/css/bootstrap-theme.css" />
-    <link rel="stylesheet" href="css/app.css" />
-    <link rel="stylesheet" href="css/sticky-footer.css" />
+    <link rel="stylesheet" href="/components/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="/components/bootstrap/dist/css/bootstrap-theme.css" />
+    <link rel="stylesheet" href="/css/app.css" />
+    <link rel="stylesheet" href="/css/sticky-footer.css" />
 </head>
 <body>
     <div id="wrap" class="container">
         <div class="banner">
-            <span>{name}</span>
-            <img src="img/straw.svg">
+            <span>FastStraw</span>
+            <img src="/img/straw.svg">
         </div>
 		{+body /}
     </div>

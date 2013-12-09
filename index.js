@@ -1,13 +1,17 @@
 'use strict';
 
-
 var kraken = require('kraken-js'),
+	mongoose = require('mongoose'),
     app = {};
 
 
 app.configure = function configure(nconf, next) {
     // Fired when an app configures itself
-    next(null);
+    mongoose.connect('mongodb://faststraw:fastpass@ds053858.mongolab.com:53858/faststraw');
+    mongoose.connection.on('connected', function () {
+    	console.log("Connected to database, passing the reins back to Kraken.");
+    	next(null);
+    });
 };
 
 
