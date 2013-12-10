@@ -48,7 +48,7 @@ module.exports = function (server) {
 					    "TextBody": "Someone's asked you to answer a question!\n\nPlease click here to anonymously answer yes or no: http://faststraw.com/vote/" + poll._id + "/" + voter.token
 					});
 				});
-				postmark.batch(messages, function (error, success {
+				postmark.batch(messages, function (error, success) {
 					if (error) {
 						res.send(error);
 					} else {
