@@ -11,6 +11,6 @@ var pollSchema = new mongoose.Schema({
 		date_voted: Date,
 		vote: Boolean
 	}]
-})
+});
 
 module.exports = mongoose.model('Poll', pollSchema);
