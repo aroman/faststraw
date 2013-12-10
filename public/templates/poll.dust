@@ -14,6 +14,7 @@
 			<span class="pre-a">A:</span>
 			<a href="#" class="btn btn-success">Yiz</a>
 			<a href="#" class="btn btn-danger"> No</a>
+			(Results)
 		</div>
 	</div>
 {/body}

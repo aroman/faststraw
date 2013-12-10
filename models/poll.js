@@ -7,6 +7,7 @@ var pollSchema = new mongoose.Schema({
 	question: String,
 	voters: [{
 		email: String,
+		token: String,
 		date_voted: Date,
 		vote: Boolean
 	}]

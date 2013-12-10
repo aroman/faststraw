@@ -26,14 +26,20 @@ module.exports = function (server) {
 			if (err) {
 				res.send(err);
 			} else {
-				res.redirect('/vote/' + poll._id);
+				res.redirect('/poll/' + poll._id);
 			}
 		});
     });
 
-    server.get('/vote/:poll_id', function (req, res) {
-        var model = { name: 'FastStraw' };
-		res.render('vote', model);
+    server.get('/poll/:poll_id', function (req, res) {
+    	Poll.findById(req.params.poll_id, function (err, poll) {
+    		if (err) {
+    			res.send(err);
+    		} else {
+    			console.log(poll);
+				res.render('poll', {question: poll.question});
+    		}
+    	});
     });
 
 };
