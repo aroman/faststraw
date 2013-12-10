@@ -1,0 +1,11 @@
+{>"layouts/master" /}
+
+{<title}
+  Vote successful!
+{/title}
+
+{<body}
+	<div id="thankyou">
+		<span>THANKS FOR VOTING!</span>
+	</div>
+{/body}

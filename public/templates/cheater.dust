@@ -1,0 +1,11 @@
+{>"layouts/master" /}
+
+{<title}
+  Nice try, smarty pants.
+{/title}
+
+{<body}
+	<div id="cheater">
+		<span>You've already answered this question!</span>
+	</div>
+{/body}

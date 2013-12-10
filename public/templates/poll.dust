@@ -12,8 +12,8 @@
 		</div>
 		<div class="answer">
 			<span class="pre-a">A:</span>
-			<a href="#" class="btn btn-success">Yiz</a>
-			<a href="#" class="btn btn-danger"> No</a>
+			<input type="submit" class="btn btn-success" value="Yes">
+			<input type="submit" class="btn btn-danger" value="No">
 			(Results)
 		</div>
 	</div>

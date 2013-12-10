@@ -12,8 +12,11 @@
 		</div>
 		<div class="answer">
 			<span class="pre-a">A:</span>
-			<a href="#" class="btn btn-success">Yes</a>
-			<a href="#" class="btn btn-danger">No</a>
+			<form method="POST">
+				<input type="hidden" name="_csrf" value="{_csrf}">
+				<input type="submit" name="yes" class="btn btn-success" value="Yes">
+				<input type="submit" name="no" class="btn btn-danger" value="No">
+			</form>
 		</div>
 	</div>
 {/body}
