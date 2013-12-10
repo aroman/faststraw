@@ -1,6 +1,6 @@
 'use strict';
 
-var poll = require("../models/poll")
+var Poll = require("../models/poll")
 
 module.exports = function (server) {
 
@@ -15,14 +15,23 @@ module.exports = function (server) {
 
 
     server.post('/create', function (req, res) {
-    	console.log(req.body);
     	if (!req.body.question || !req.body.invitees) {
     		res.send('<iframe width="560" height="315" src="//www.youtube.com/embed/PgIShXhX6Yo" frameborder="0" allowfullscreen></iframe>');
+    		return;
     	}
-		res.render('create');
+		var poll = new Poll();
+		poll.question = req.body.question;
+		poll.invitees = req.body.invitees.split(",");
+		poll.save(function(err) {
+			if (err) {
+				res.send(err);
+			} else {
+				res.redirect('/vote/' + poll._id);
+			}
+		});
     });
 
-    server.get('/vote/:token', function (req, res) {
+    server.get('/vote/:poll_id', function (req, res) {
         var model = { name: 'FastStraw' };
 		res.render('vote', model);
     });
