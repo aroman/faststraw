@@ -16,6 +16,9 @@ module.exports = function (server) {
 
     server.post('/create', function (req, res) {
     	console.log(req.body);
+    	if (!req.body.question || !req.body.invitees) {
+    		res.send('<iframe width="560" height="315" src="//www.youtube.com/embed/PgIShXhX6Yo" frameborder="0" allowfullscreen></iframe>');
+    	}
 		res.render('create');
     });
 
