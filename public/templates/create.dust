@@ -6,6 +6,9 @@
 
 {<body}
 	<div id="main">
-		<h1>CREATION MOTHAFUCKA</h1>
+		<div id="taunt">
+			<span class="quote">&ldquo;Judge a man by his questions rather than by his answers.&rdquo;</span>
+		</div>
+		<input type="text" id="question-input" name="question" class="form-control input-lg" autofocus="yes" placeholder="When does the narwhal bacon?">
 	</div>
 {/body}

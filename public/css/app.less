@@ -70,6 +70,38 @@ body {
   }
 }
 
+#question-input {
+  margin-left: 10%;
+  width: 80%;
+  font-size: 20px;
+  text-align: center;
+  // outline: 0;
+  &:focus {
+    border-color: #FFA500;
+    -webkit-box-shadow: 0 0 15px #FFA500;
+    box-shadow:  0 0 15px #FFA500;
+  }
+  &::-webkit-input-placeholder {
+      font-style: italic;
+      font-family: 'Signika Negative', sans-serif;
+  }
+}
+
+#taunt {
+  margin-top: 100px;
+  margin-bottom: 50px;
+  font-family: 'Shadows Into Light', cursive;
+  text-align: center;
+  .quote {
+    font-size: 30px;
+  }
+  .author {
+    display: none;
+    font-size: 20px;
+    font-style: italic;
+  }
+}
+
 #footer {
   color: #ccc;
   background: #000;
