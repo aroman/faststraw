@@ -9,6 +9,27 @@
 		<div id="taunt">
 			<span class="quote">&ldquo;Judge a man by his questions rather than by his answers.&rdquo;</span>
 		</div>
-		<input type="text" id="question-input" name="question" class="form-control input-lg" autofocus="yes" placeholder="When does the narwhal bacon?">
+		<form id="createpoll" method="POST">
+			<input type="hidden" name="_csrf" value="{_csrf}">
+			<input type="text" id="question-input" name="question" class="form-control input-lg" autofocus="yes" placeholder="When does the narwhal bacon?">
+			<textarea id="invitees" name="invitees" class="form-control input-lg" placeholder="larry@example.org, moe@example.org, curley@example.org"></textarea>
+			<button type="submit" class="btn btn-lg btn-success" disabled="hellyeah">I agree with Voltaire. I promise my question doesn't suck.</button>
+		</form>
 	</div>
+	<script src="/components/jquery/jquery.min.js"/></script>
+	<script>
+		$("#question-input").keyup(function(e) {
+			if ($(e.target).val().indexOf("?") != -1 && !window.onlyonce) {
+				$("#invitees").focus();
+				window.onlyonce = true;
+			}
+		});
+		$("#invitees").keyup(function(e) {
+			if ($(e.target).val().length > 0) {
+				$("button").prop("disabled", false);
+			} else {
+				$("button").prop("disabled", true);
+			}
+		});
+	</script>
 {/body}

@@ -13,6 +13,12 @@ module.exports = function (server) {
 		res.render('create');
     });
 
+
+    server.post('/create', function (req, res) {
+    	console.log(req.body);
+		res.render('create');
+    });
+
     server.get('/vote/:token', function (req, res) {
         var model = { name: 'FastStraw' };
 		res.render('vote', model);

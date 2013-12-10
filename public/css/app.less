@@ -70,12 +70,12 @@ body {
   }
 }
 
-#question-input {
+#question-input, #invitees {
+  margin-top: 40px;
   margin-left: 10%;
   width: 80%;
   font-size: 20px;
   text-align: center;
-  // outline: 0;
   &:focus {
     border-color: #FFA500;
     -webkit-box-shadow: 0 0 15px #FFA500;
@@ -83,13 +83,32 @@ body {
   }
   &::-webkit-input-placeholder {
       font-style: italic;
-      font-family: 'Signika Negative', sans-serif;
   }
+}
+
+#createpoll {
+  text-align: center;
+  margin-bottom: 40px;
+  >button {
+    margin-top: 40px;
+    @media (max-width: 1000px) {
+      font-size: 11px;
+    }
+    @media (min-width: 1000px) {
+      font-size: 25px;
+    }
+  }
+}
+
+#invitees {
+  font-size: 15px;
+  resize: none;
+  height: 200px;
+  text-align: left;
 }
 
 #taunt {
   margin-top: 100px;
-  margin-bottom: 50px;
   font-family: 'Shadows Into Light', cursive;
   text-align: center;
   .quote {
