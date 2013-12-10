@@ -67,8 +67,14 @@ module.exports = function (server) {
             if (err) {
                 res.send(err);
             } else {
-                if (_.pluck(poll.voters, 'token').indexOf(req.params.voter_token) !== -1) {
-                    res.render('vote', {question: poll.question});
+                var index_of_voter = _.pluck(poll.voters, 'token').indexOf(req.params.voter_token);
+                if (index_of_voter !== -1) {
+                    if (_.has(poll.voters[index_of_voter]._doc, 'vote')) {
+                        res.redirect("/cheater");
+                        return;
+                    } else {
+                        res.render('vote', {question: poll.question});
+                    }
                 } else {
                     res.send('Silly rabbit, Trix are for kids!');
                 }
@@ -77,13 +83,16 @@ module.exports = function (server) {
     });
 
     server.post('/vote/:poll_id/:voter_token', function (req, res) {
-        // res.send(req.body)
         Poll.findById(req.params.poll_id, function (err, poll) {
             if (err) {
                 res.send(err);
             } else {
                 var index_of_voter = _.pluck(poll.voters, 'token').indexOf(req.params.voter_token);
                 if (index_of_voter !== -1) {
+                    if (_.has(poll.voters[index_of_voter]._doc, 'vote')) {
+                        res.redirect("/cheater");
+                        return;
+                    }
                     poll.voters[index_of_voter].date_voted = Date.now();
                     if (_.has(req.body, "yes")) {
                         // Yes
