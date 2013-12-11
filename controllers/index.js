@@ -31,7 +31,7 @@ module.exports = function (server) {
         var poll = new Poll();
         poll.question = question;
         poll.voters = [];
-        async.each(invitees_blob.split(','), function(invitee_blob, cb) {
+        async.each(_.uniq(invitees_blob.split(',')), function(invitee_blob, cb) {
             crypto.randomBytes(8, function (ex, buf) {
                 poll.voters.push({
                     email: invitee_blob,
@@ -147,8 +147,6 @@ module.exports = function (server) {
                 var num_total = poll.voters.length;
                 var num_yes = reduce;
                 var num_no = num_voted - num_yes;
-                console.log(map);
-                console.log(reduce);
                 res.render('poll', {question: poll.question,
                     num_yes: num_yes,
                     num_no: num_no,
