@@ -11,7 +11,7 @@
 		</div>
 		<form id="createpoll" method="POST">
 			<input type="hidden" name="_csrf" value="{_csrf}">
-			<input type="text" id="question-input" name="question" class="form-control input-lg" autofocus="yes" placeholder="When does the narwhal bacon?">
+			<input type="text" id="question-input" name="question" class="form-control input-lg" autofocus="yes" placeholder="Are you smarter than a fifth grader?">
 			<textarea id="invitees" name="invitees" class="form-control input-lg" placeholder="larry@example.org, moe@example.org, curley@example.org"></textarea>
 			<button type="submit" class="btn btn-lg btn-success" disabled="hellyeah">I agree with Voltaire. I promise my question doesn't suck.</button>
 		</form>

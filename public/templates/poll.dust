@@ -1,7 +1,7 @@
 {>"layouts/master" /}
 
 {<title}
-  FastStraw
+  Results
 {/title}
 
 {<body}
@@ -12,9 +12,12 @@
 		</div>
 		<div class="answer">
 			<span class="pre-a">A:</span>
-			<input type="submit" class="btn btn-success" value="Yes">
-			<input type="submit" class="btn btn-danger" value="No">
-			(Results)
+			<input type="submit" disabled="disabled" class="btn btn-success" value="Yes">
+			<input type="submit" disabled="disabled" class="btn btn-danger" value="No">
+			<h3><strong>Yes:</strong> {num_yes}/{num_total}</h3>
+			<h3><strong>No:</strong> {num_no}/{num_total}</h3>
+			<h3><strong>Voted:</strong> {num_voted}/{num_total}<h3>
+			<h3>
 		</div>
 	</div>
 {/body}
