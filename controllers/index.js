@@ -24,6 +24,10 @@ module.exports = function (server) {
             res.send('<iframe width="560" height="315" src="//www.youtube.com/embed/PgIShXhX6Yo" frameborder="0" allowfullscreen></iframe>');
             return;
         }
+        // FIXME: This is so I don't get sued.
+        if (invitees_blob.length > 100) {
+            res.send("Hey, I'm sure you meant well, but this service is super pre-alpha right now, and I don't want to have to deal with people sending that many emails. Thanks for understanding :)")
+        }
         var poll = new Poll();
         poll.question = question;
         poll.voters = [];
