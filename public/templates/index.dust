@@ -8,6 +8,6 @@
 	<div id="index">
 		<span>&ldquo;The best argument against democracy is a five-minute conversation with the average voter.&ldquo;</span>
 		<br>
-		<a href="/create" class="btn btn-lg btn-success">Create a poll</a>
+		<a href="/create" class="btn btn-lg btn-success">Defy Churchill</a>
 	</div>
 {/body}
