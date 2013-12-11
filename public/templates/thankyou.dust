@@ -7,5 +7,7 @@
 {<body}
 	<div id="thankyou">
 		<span>THANKS FOR VOTING!</span>
+		<br>
+		<img src="/img/seinfeld.gif">
 	</div>
 {/body}

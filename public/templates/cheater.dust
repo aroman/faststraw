@@ -7,5 +7,7 @@
 {<body}
 	<div id="cheater">
 		<span>You've already answered this question!</span>
+		<br>
+		<img src="/img/picard.gif">
 	</div>
 {/body}
