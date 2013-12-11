@@ -138,16 +138,20 @@ module.exports = function (server) {
                 res.send(err);
             } else {
                 console.log(poll);
-                var map = _.map(poll.voters, function (voter) {
-                    return voter.vote ? 1 : 0;
-                });
-                var reduce = _.reduce(map, function (memo, num) {
-                    return memo + num;
-                }, 0);
-                var num_voted = _.pluck(poll.voters, "vote").length;
+                var num_voted = 0;
+                var num_yes = 0;
+                var num_no = 0;
                 var num_total = poll.voters.length;
-                var num_yes = reduce;
-                var num_no = num_voted - num_yes;
+                _.each(poll.voters, function(voter) {
+                    if (voter.vote === true) {
+                        num_yes++;
+                        num_voted++;
+                    }
+                    else if (voter.vote === false) {
+                        num_no++;
+                        num_voted++;
+                    }
+                });
                 res.render('poll', {question: poll.question,
                     num_yes: num_yes,
                     num_no: num_no,
