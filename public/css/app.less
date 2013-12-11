@@ -41,14 +41,16 @@ body {
       margin-top: -30px;
     }
   }
+  > a:hover {
+    text-decoration: none;
+  }
 }
 
 #main {
   font-family: 'Signika Negative', sans-serif;
-  text-align: center;
   font-size: 40px;
-  text-align: left;
   padding-left: 25px;
+  text-align: left;
   .pre-q {
     padding-right: 15px;
     color: #428bca;
@@ -62,7 +64,10 @@ body {
     padding-right: 15px;
     font-size: 75px;
   }
-  a {
+  form {
+    display: inline;
+  }
+  input {
     margin-right: 10px;
     margin-top: -25px;
     font-size: 30px;
@@ -86,8 +91,11 @@ body {
   }
 }
 
+.create-main {
+  text-align: center !important;
+}
+
 #createpoll {
-  text-align: center;
   margin-bottom: 40px;
   >button {
     margin-top: 40px;
@@ -108,7 +116,8 @@ body {
 }
 
 #taunt {
-  margin-top: 100px;
+  margin-top: 50px;
+  margin-bottom: 50px;
   font-family: 'Shadows Into Light', cursive;
   text-align: center;
   .quote {

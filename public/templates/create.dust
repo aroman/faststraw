@@ -5,7 +5,7 @@
 {/title}
 
 {<body}
-	<div id="main">
+	<div id="main" class="create-main">
 		<div id="taunt">
 			<span class="quote">&ldquo;Judge a man by his questions rather than by his answers.&rdquo;</span>
 		</div>

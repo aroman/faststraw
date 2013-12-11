@@ -46,7 +46,7 @@ module.exports = function (server) {
                             'From': 'avi@romanoff.me', 
                             'To': voter.email, 
                             'Subject': poll.question, 
-                            'TextBody': "Someone's asked you to answer a question!\n\nPlease click here to anonymously answer yes or no: http://faststraw.com/vote/" + poll._id + "/" + voter.token
+                            'TextBody': "You've been asked a question on FastStraw!\n\nPlease click here to (anonymously) answer yes or no: http://faststraw.com/vote/" + poll._id + "/" + voter.token
                         });
                     });
                     postmark.batch(messages, function (error, success) {

@@ -14,8 +14,10 @@
 <body>
     <div id="wrap" class="container">
         <div class="banner">
-            <span>FastStraw</span>
-            <img src="/img/straw.svg">
+            <a href="/">
+                <span>FastStraw</span>
+                <img src="/img/straw.svg">
+            </a>
         </div>
 		{+body /}
     </div>
