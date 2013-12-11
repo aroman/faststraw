@@ -27,6 +27,7 @@ module.exports = function (server) {
         // FIXME: This is so I don't get sued.
         if (invitees_blob.length > 100) {
             res.send("Hey, I'm sure you meant well, but this service is super pre-alpha right now, and I don't want to have to deal with people sending that many emails. Thanks for understanding :)")
+            return;
         }
         var poll = new Poll();
         poll.question = question;
