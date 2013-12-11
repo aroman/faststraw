@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="author" content="Avi Romanoff">
     <meta name="author" content="Plebiscites for the Wild West">
-    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=768">
     <title>{+title /}</title>
     <link href='http://fonts.googleapis.com/css?family=Architects+Daughter|Englebert|Signika+Negative|Shadows+Into+Light' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="/components/bootstrap/dist/css/bootstrap.css" />
