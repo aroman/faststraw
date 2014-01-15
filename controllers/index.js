@@ -10,7 +10,7 @@ module.exports = function (server) {
 
     server.get('/', function (req, res) {
         var model = { name: 'FastStraw' };
-        res.render('index', model);  
+        res.render('index', model);
     });
 
     server.get('/create', function (req, res) {
@@ -48,10 +48,10 @@ module.exports = function (server) {
                     var messages = [];
                     poll.voters.forEach(function(voter) {
                         messages.push({
-                            'From': 'avi@romanoff.me', 
-                            'To': voter.email, 
-                            'Subject': poll.question, 
-                            'TextBody': "You've been asked a question on FastStraw!\n\nPlease click the link below to (anonymously) answer yes or no: http://faststraw.com/vote/" + poll._id + "/" + voter.token
+                            'From': 'winston@faststraw.com',
+                            'To': voter.email,
+                            'Subject': poll.question,
+                            'TextBody': "You've been asked a question on FastStraw!\n\nPlease click the link below to (anonymously) answer yes or no: http://www.faststraw.com/vote/" + poll._id + "/" + voter.token
                         });
                     });
                     postmark.batch(messages, function (error, success) {

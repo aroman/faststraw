@@ -1,4 +1,3 @@
-'use strict';
 
 var kraken = require('kraken-js'),
 	mongoose = require('mongoose'),
